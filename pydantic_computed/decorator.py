@@ -1,6 +1,6 @@
 from pydantic import validator, root_validator
 from typing import Callable, Dict
-from inspect import getargspec, signature
+from inspect import signature
 
 def computed(property_key: str, recompute_always: bool = True):
     def __computed_wrapper(method: Callable):
